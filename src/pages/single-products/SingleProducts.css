@@ -1,0 +1,111 @@
+/*  start product overview section */
+.product-overview .container .product {
+  display: flex;
+  gap: 20px;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+.product-overview .checked {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+}
+.product-overview .checked .stores {
+  display: flex;
+  align-items: center;
+}
+.product-overview .checked .stores p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+}
+
+.product-overview .checked h2 {
+  font-weight: 500;
+  font-size: 28px;
+  color: var(--text-color);
+}
+.product-overview .checked p {
+  font-weight: 500;
+  font-size: 24px;
+  color: var(--text-color);
+}
+.product-overview .checked span {
+  font-weight: 300;
+  font-size: 18px;
+  color: #000000;
+}
+.product-overview .checked img {
+  border: 1px solid var(--text-color);
+}
+.product-overview .checked select {
+  width: 416px;
+  height: 54px;
+
+  border: 1px solid var(--text-color);
+}
+.product-overview .checked select {
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--text-color);
+}
+.product-overview .checked button {
+  width: 416px;
+  height: 54px;
+  border-radius: 0%;
+  background-color: var(--text-color);
+  color: var(--white-color);
+}
+/*  end product overview section */
+/* start product description */
+.description {
+  width: 856px;
+  height: 309px;
+  background-color: #f0efed;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 40px;
+}
+.product-description h3 {
+  font-weight: 300;
+  font-size: 16px;
+  color: #da0909;
+  margin-bottom: 20px;
+}
+.product-description .twin-duvet {
+  font-weight: 300;
+  font-size: 18px;
+  color: var(--text-color);
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.product-description .Composition {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--text-color);
+  margin-top: 5px;
+}
+.product-description span {
+  color: rgba(0, 0, 0, 0.5);
+}
+/* end product description */
+/* start related products section */
+.related-products {
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+.related-products .items {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+.related-products h2 {
+  font-weight: 500;
+  font-size: 24px;
+  color: var(--text-color);
+  margin-left: 60px;
+}
+
+/* end relead products section */
