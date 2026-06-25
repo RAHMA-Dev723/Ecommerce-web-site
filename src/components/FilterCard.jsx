@@ -1,15 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-function FilterCard({ img, title, price, children }) {
+function FilterCard({ images, title, price, children, id }) {
   return (
-    <div className="filler-card">
-      <img src={img} alt="" />
-      <div className="details">
-        <h3>{title}</h3>
-        {children}
-        <p>{price}"$"</p>
+    <Link
+      to={`/product/${id}`}
+      style={{ textDecoration: "none", color: "inherit" }}
+    >
+      <div className="filler-card">
+        <img src={images && images.length > 0 ? images[0] : ""} alt="" />
+        <div className="details">
+          <h3>{title}</h3>
+          {children}
+          <p>{price}$</p>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

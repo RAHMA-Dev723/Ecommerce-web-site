@@ -4,16 +4,13 @@ import Productcard from "../../../components/Productcard";
 import Promocard from "../../../components/Promocard";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useContext } from "react";
-import { ProductContext } from "./Context";
+import cards from "../../../Data/Products";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 // import required modules
 import { Pagination } from "swiper/modules";
 function ProductsSection({ productRef }) {
-  const cards = useContext(ProductContext);
-
   const cardslist = cards.map((card) => {
     return (
       <Productcard

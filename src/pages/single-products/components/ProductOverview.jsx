@@ -1,18 +1,19 @@
 import React from "react";
 import Button from "@mui/material/Button";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-function ProductOverview() {
+import { Link } from "react-router-dom";
+function ProductOverview({ item, id }) {
   return (
     <div className="product-overview">
       <div className="container">
         <div className="product">
-          <img src="/img/Rectangle 83.png" alt="" />
-          <img src="/img/Rectangle 82.png" alt="" />
+          <img src={item.images[0]} alt="" />
+          <img src={item.images[1]} alt="" />
           <div className="checked">
-            <h2>Checked Duvet Cover Set</h2>
-            <p>39.99 $</p>
+            <h2>{item.title}</h2>
+            <p>{item.price}$</p>
             <span>Light khaki green/white checks</span>
-            <img src="/img/Rectangle 84.png" alt="" />
+            <img src={item.images[0]} alt="" />
             <div className="stores">
               <LocationOnIcon />
               <p> Not available in stores</p>
@@ -20,12 +21,14 @@ function ProductOverview() {
             <select>
               <option>select size</option>
             </select>
-            <Button className="paragraph-base" variant="contained">
-              load more products
-            </Button>
+            <Link to={`/shopping/${id}`}>
+              <Button className="paragraph-base" variant="contained">
+                Add to shopping bag
+              </Button>
+            </Link>
           </div>
         </div>
-        <img src="/img/Rectangle 97.png" alt="" />
+        <img className="product-image" src={item.images[2]} alt="" />
       </div>
     </div>
   );

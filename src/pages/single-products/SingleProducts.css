@@ -5,6 +5,19 @@
   margin-top: 80px;
   margin-bottom: 40px;
 }
+.product-overview .container .product img:first-child {
+  width: 416px;
+  height: 572px;
+}
+.product-overview .container .product img:nth-child(2) {
+  width: 416px;
+  height: 572px;
+}
+.product-overview .container .product-image {
+  width: 884px;
+  height: 586px;
+}
+
 .product-overview .checked {
   display: flex;
   flex-direction: column;
@@ -38,6 +51,8 @@
 }
 .product-overview .checked img {
   border: 1px solid var(--text-color);
+  width: 53px;
+  height: 72px;
 }
 .product-overview .checked select {
   width: 416px;

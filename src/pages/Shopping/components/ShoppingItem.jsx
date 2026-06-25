@@ -6,10 +6,10 @@ import Box from "@mui/material/Box";
 function ShoppingItem({ product }) {
   return (
     <div className="shopping-item">
-      <img src={product.img} alt="" />
+      <img src={product.images[0]} alt="" />
       <div className="item">
         <h3>{product.title}</h3>
-        <p>{product.price}</p>
+        <p>{product.price}$</p>
         <div className="item-details">
           <div>
             <p> Art. No.:</p>
@@ -27,7 +27,7 @@ function ShoppingItem({ product }) {
           <div>
             <p>{product.size}</p>
 
-            <p>{product.price}</p>
+            <p>{product.price}$</p>
           </div>
         </div>
         <div className="actions">

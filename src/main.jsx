@@ -5,7 +5,7 @@ import App from "./App.jsx";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { green, purple } from "@mui/material/colors";
 import { BrowserRouter } from "react-router-dom";
-import CartProvider from "./pages/Home/components/CartProvider";
+import CartProvider from "./pages/Home/components/CartContext.jsx";
 const theme = createTheme({
   palette: {
     primary: {
