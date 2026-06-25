@@ -13,7 +13,7 @@ function SingleProducts() {
   }
   return (
     <div>
-      <ProductOverview item={item} />
+      <ProductOverview item={item} id={id} />
       <ProductDescriprition />
       <RelatedProducts item={item} />
     </div>
