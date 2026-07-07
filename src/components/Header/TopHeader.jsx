@@ -7,16 +7,18 @@ import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlin
 import Divider from "@mui/material/Divider";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
-import { CartContext } from "../../pages/Home/components/CartContext";
-function TopHeader() {
+import { CartContext } from "../../context/CartContext";
+import { Link } from "react-router-dom";
+
+function TopHeader({ id }) {
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
   const { cart } = useContext(CartContext);
   const handlesearch = (e) => {
     if (e.key === "Enter") {
-      navigate(`/shopping?q=${searchTerm}`);
+      navigate(`/Brand?q=${searchTerm}`);
     }
   };
   return (
@@ -43,14 +45,15 @@ function TopHeader() {
               <PersonOutlinedIcon
                 sx={{ fontSize: "34px", color: "var(--text-color)" }}
               />
-              <div className="icon">
-                {" "}
-                <ShoppingBagOutlinedIcon
-                  sx={{ fontSize: "34px", color: "var(--text-color)" }}
-                />
-                <span className="count">{cart.length}</span>
-              </div>
-
+              <Link to={`/shopping/${id}`}>
+                <div className="icon">
+                  {" "}
+                  <ShoppingBagOutlinedIcon
+                    sx={{ fontSize: "34px", color: "var(--text-color)" }}
+                  />
+                  <span className="count">{cart.length}</span>
+                </div>
+              </Link>
               <FavoriteBorderOutlinedIcon
                 sx={{ fontSize: "34px", color: "var(--text-color)" }}
               />

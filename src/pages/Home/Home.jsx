@@ -8,7 +8,7 @@ import TopRating from "./components/TopRating";
 import Newslatter from "./components/Newslatter";
 import ServicesSection from "./components/ServicesSection";
 import { useRef } from "react";
-
+import BackToTop from "./BackToTop";
 function Home() {
   const productRef = useRef(null);
 
@@ -18,6 +18,7 @@ function Home() {
       <Herosection productRef={productRef} />
       <Categories />
       <ProductsSection productRef={productRef} />
+      <BackToTop />
       <Productpreview />
       <TopRating />
       <Newslatter />

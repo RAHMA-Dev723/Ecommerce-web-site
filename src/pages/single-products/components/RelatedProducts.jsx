@@ -5,58 +5,20 @@ import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutl
 import items from "../../../Data/Items";
 import { useParams } from "react-router-dom";
 
-// const items = [
-//   {
-//     id: 1,
-//     img: "/img/Rectangle 67.png",
-//     title: "Flannel Duvet Cover Set",
-//     color1: "#DDEDD6",
-//     color2: "#F3DDD8",
-//     color3: "#C4BDB6",
-//     price: "30$",
-//   },
-//   {
-//     id: 2,
-//     img: "/img/Rectangle 76.png",
-//     title: "Ribbed Wool-blend Throw",
-//     color1: "#DDEDD6",
-//     color2: "",
-//     color3: "#C4BDB6",
-//     price: "30$",
-//   },
-//   {
-//     id: 3,
-//     img: "/img/Rectangle 1.png",
-//     title: "Fitted Cotton Sheet",
-//     color1: "#DDEDD6",
-//     color2: "#F3DDD8",
-//     color3: "#C4BDB6",
-//     price: "30$",
-//   },
-//   {
-//     id: 4,
-//     img: "/img/Rectangle 75.png",
-//     title: "Washed Linen Pillowcase",
-//     color1: "#DDEDD6",
-//     color2: "#F3DDD8",
-//     color3: "#C4BDB6",
-//     price: "30$",
-//   },
-// ];
 function RelatedProducts() {
   const { id } = useParams();
   const item = items.find((p) => p.id === Number(id));
   if (!item) {
-    return <h1>Product not found</h1>;
+    // return <h1>Product not found</h1>;
   }
   const RelatedItems = items
     .filter((item) => item.id !== Number(id))
     .slice(0, 4);
-  console.log(RelatedItems.length);
   const listitems = RelatedItems.map((item) => {
     return (
       <FilterCard
         key={item.id}
+        id={item.id}
         images={item.images}
         title={item.title}
         price={item.price}

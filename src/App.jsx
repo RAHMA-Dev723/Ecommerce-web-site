@@ -6,7 +6,8 @@ import { Route, Routes } from "react-router-dom";
 import Shopping from "./pages/Shopping/Shopping";
 import MainLayout from "./MainLayout";
 import Dashboard from "./pages/Dashbord/Dashboard";
-// import ProductDetails from "./pages/Home/components/ProductDetails";
+import Checkout from "./pages/checkout/Checkout";
+import ThankYou from "./pages/ThankYou/ThankYou";
 
 function App() {
   return (
@@ -17,9 +18,10 @@ function App() {
           <Route path="/Brand" element={<Brand />} />
           <Route path="/product/:id" element={<SingleProducts />} />{" "}
           <Route path="/shopping/:id" element={<Shopping />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Route>
         {/* <Route path="/dashboard" element={<Dashboard />} /> */}
-        {/* <Route path="/Productdetails/:id" element={<ProductDetails />} /> */}
+        <Route path="/thankyou" element={<ThankYou />} />
       </Routes>
     </div>
   );

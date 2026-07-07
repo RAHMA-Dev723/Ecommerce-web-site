@@ -2,17 +2,13 @@ import React from "react";
 import ShoppingBag from "./components/ShoppingBag";
 import RelatedProducts from "../single-products/components/RelatedProducts";
 import "./Shopping.css";
-import { useSearchParams, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import items from "../../Data/Items";
 
 function Shopping() {
-  const [searchParams] = useSearchParams();
-  const searchTerm = searchParams.get("q");
-  console.log(searchTerm);
   const { id } = useParams();
   const item = items.find((p) => p.id === Number(id));
-  console.log("id =", id);
-  console.log("item =", item);
+
   return (
     <div>
       <ShoppingBag item={item} />

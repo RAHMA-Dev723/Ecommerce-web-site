@@ -1,0 +1,69 @@
+.checkout {
+  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+.checkout .container {
+  display: grid;
+  grid-template-columns: 1fr 510px;
+  gap: 60px;
+}
+.checkout .container h2 {
+  font-weight: 500;
+  font-size: 34px;
+  margin-bottom: 60px;
+  color: var(--text-color);
+}
+.checkout .container .card {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.checkout .container .checkout-form form {
+  background-color: rgba(236, 235, 233, 0.7);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: left;
+}
+
+.checkout .container .checkout-form form input {
+  width: 416px;
+  height: 48px;
+  border: 1px solid var(--text-color);
+  font-size: 16px;
+  color: var(--text-color);
+  padding-left: 20px;
+}
+.checkout .container .checkout-form form button {
+  width: 416px;
+  height: 48px;
+  background-color: var(--text-color);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--white-color);
+  border-radius: 0%;
+  margin-top: 30px;
+}
+.checkout .container .checkout-form .error {
+  color: #d32f2f;
+  font-size: 14px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  font-weight: 400;
+}
+.checkout .container .sumarry-order .details {
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+.checkout .container .sumarry-order .details p {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--text-color);
+  padding: 5px;
+}
+.checkout .container .sumarry-order .card {
+  margin-bottom: 40px;
+}

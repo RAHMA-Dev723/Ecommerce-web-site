@@ -7,6 +7,10 @@ const items = [
     color2: "#8F8E73",
     price: 39,
     category: "Products",
+    ArtNo: "54637253 ",
+    color: "Velvet ",
+    sizes: ["40*40 cm", "50*50 cm", "60*60 cm"],
+    qty: "1",
   },
   {
     id: 2,
@@ -19,6 +23,10 @@ const items = [
     color1: "#9F9189 ",
     price: 14,
     category: "Models",
+    ArtNo: "54637253 ",
+    color: "white",
+    sizes: ["Small", "Medium", "Large"],
+    qty: "1",
   },
   {
     id: 3,
@@ -32,6 +40,11 @@ const items = [
     color2: "#828282",
     price: 25,
     category: "Models",
+    ArtNo: "54637253 ",
+    color: "yellow",
+    sizes: ["10*15 cm", "13*18 cm", "20*25 cm"],
+
+    qty: "1",
   },
   {
     id: 4,
@@ -45,6 +58,10 @@ const items = [
     color2: "#D4CEBF",
     price: 34,
     category: "Products",
+    ArtNo: "54637253 ",
+    color: "bage",
+    sizes: ["60 cm", "90 cm", "120 cm"],
+    qty: "1",
   },
   {
     id: 5,
@@ -58,6 +75,10 @@ const items = [
     color2: "#7B3D39",
     price: 22,
     category: "Models",
+    ArtNo: "54637253 ",
+    color: "pink",
+    sizes: ["Small", "Medium", "Large"],
+    qty: "1",
   },
   {
     id: 6,
@@ -71,6 +92,10 @@ const items = [
     color2: "#A2A285",
     price: 44,
     category: "Products",
+    ArtNo: "54637253 ",
+    color: "tray",
+    sizes: ["Single", "Double", "Queen", "King"],
+    qty: "1",
   },
   {
     id: 7,
@@ -85,6 +110,10 @@ const items = [
     color3: "#C4BDB6",
     price: 24,
     category: "Products",
+    ArtNo: "54637253 ",
+    color: "white",
+    sizes: ["Single", "Double", "Queen", "King"],
+    qty: "1",
   },
   {
     id: 8,
@@ -99,7 +128,12 @@ const items = [
     color3: "#D8B4A2",
     price: 14,
     category: "Models",
+    ArtNo: "54637253 ",
+    color: "brown",
+    sizes: ["100 ml", "200 ml", "300 ml"],
+    qty: "1",
   },
+
   {
     id: 9,
     images: [
@@ -114,8 +148,7 @@ const items = [
     category: "Products",
     ArtNo: "54637253 ",
     color: "Mint",
-    size: "21*45",
-    total: "39.99 $",
+    sizes: ["Single", "Double", "Queen", "King"],
     qty: "1",
   },
   {
@@ -131,6 +164,10 @@ const items = [
     color3: "#A6A68B",
     price: 18,
     category: "Products",
+    ArtNo: "54637253 ",
+    color: "gray",
+    sizes: ["50*60 cm", "50*70 cm", "65*65 cm"],
+    qty: "1",
   },
   {
     id: 11,
@@ -146,10 +183,9 @@ const items = [
     price: 24,
     category: "Products",
     ArtNo: "54633464 ",
-    color: "Beige",
-    size: "45*64",
-    total: "42.99 $",
-    qty: "4",
+    color: "bage",
+    sizes: ["130*170 cm", "150*200 cm"],
+    qty: "1",
   },
   {
     id: 12,
@@ -164,6 +200,10 @@ const items = [
     color3: "#C4BDB6",
     price: 8,
     category: "Models",
+    ArtNo: "54637253 ",
+    color: "pink",
+    sizes: ["10 cm", "15 cm", "20 cm"],
+    qty: "1",
   },
 ];
 export default items;

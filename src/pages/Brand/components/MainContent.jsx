@@ -4,17 +4,30 @@ import FilterCard from "../../../components/FilterCard";
 import Button from "@mui/material/Button";
 import { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
-// import Box from "@mui/material/Box";
-// import Slider from "@mui/material/Slider";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 import items from "../../../Data/Items";
+import { useSearchParams } from "react-router-dom";
+
 function MainContent() {
+  const [priceRange, setPriceRange] = useState([0, 500]);
+  const [searchParams] = useSearchParams();
+  const searchTerm = searchParams.get("q");
   const [active, setActive] = useState("All");
   const filteredItems =
     active === "All" ? items : items.filter((item) => item.category === active);
+  const filterBySearch = !searchTerm
+    ? filteredItems
+    : filteredItems.filter((item) =>
+        item.title.toLowerCase().includes(searchTerm.toLowerCase()),
+      );
+
+  const handlerange = filterBySearch.filter(
+    (item) => item.price >= priceRange[0] && item.price <= priceRange[1],
+  );
+
   const [sortOrder, setSortOrder] = useState("All");
-  const sortedItems = [...filteredItems].sort((a, b) => {
+  const sortedItems = [...handlerange].sort((a, b) => {
     if (sortOrder === "lowToHigh") {
       return a.price - b.price;
     } else if (sortOrder === "highToLow") {
@@ -49,15 +62,7 @@ function MainContent() {
     );
   });
   const [openfilter, setopenfilter] = useState(false);
-  // function valuetext(value) {
-  //   return `${value}`;
-  // }
 
-  // const [min, max] = useState([20, 37]);
-
-  // const handleChange = (event, newValue) => {
-  //   max(newValue);
-  // };
   return (
     <div className="main-content">
       <div className="container">
@@ -73,7 +78,6 @@ function MainContent() {
               className="filter-icon"
               onClick={() => {
                 setopenfilter(true);
-                // console.log("clicked");
               }}
             >
               <FilterAltOutlinedIcon />
@@ -108,16 +112,15 @@ function MainContent() {
                           High to Low
                         </li>
                         <li>
-                          {/* <Box sx={{ width: 300 }}>
-                            <Slider
-                              getAriaLabel={() => "Temperature range"}
-                              value={min}
-                              onChange={handleChange}
-                              valueLabelDisplay="auto"
-                              getAriaValueText={valuetext}
-                            />
-                          </Box> */}
-                          <Slider range />
+                          <Slider
+                            range
+                            value={priceRange}
+                            onChange={(value) => setPriceRange(value)}
+                          />
+
+                          <p>
+                            ${priceRange[0]} - ${priceRange[1]}
+                          </p>
                         </li>
                       </ul>
                     </li>
@@ -135,7 +138,14 @@ function MainContent() {
                 </div>
                 <div className="dropdown-buttons">
                   <button> CLEAR ALL</button>
-                  <button> DONE</button>
+                  <button
+                    onClick={() => {
+                      setopenfilter(false);
+                    }}
+                  >
+                    {" "}
+                    DONE
+                  </button>
                 </div>
               </div>
             )}
@@ -156,6 +166,9 @@ function MainContent() {
             </div>
           </div>
         </div>
+        <p className="avilable-product">
+          Showing {sortedItems?.length} products
+        </p>
         <div className="products">{listitems}</div>
         <Button className="paragraph-base load-button" variant="contained">
           load more products

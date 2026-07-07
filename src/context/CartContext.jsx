@@ -8,16 +8,21 @@ export default function CartProvider({ children }) {
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
-  const AddToCart = (product) => {
-    const existingProduct = cart.find((item) => item.id === product.id);
+
+  const AddToCart = (product, selectedSize) => {
+    const existingProduct = cart.find(
+      (item) => item.id === product.id && item.selectedSize === selectedSize,
+    );
     if (existingProduct) {
       setCart(
         cart.map((item) =>
-          item.id === product.id ? { ...item, qty: item.qty + 1 } : item,
+          item.id === product.id && item.selectedSize === selectedSize
+            ? { ...item, qty: item.qty + 1 }
+            : item,
         ),
       );
     } else {
-      setCart([...cart, { ...product, qty: 1 }]);
+      setCart([...cart, { ...product, qty: 1, selectedSize }]);
     }
   };
   const RemoveFromCart = (id) => {
@@ -26,6 +31,9 @@ export default function CartProvider({ children }) {
   const updateQty = (id, qty) => {
     setCart(cart.map((item) => (item.id === id ? { ...item, qty } : item)));
   };
+  const ClearCart = () => {
+    setCart([]);
+  };
   return (
     <CartContext.Provider
       value={{
@@ -33,6 +41,7 @@ export default function CartProvider({ children }) {
         AddToCart,
         RemoveFromCart,
         updateQty,
+        ClearCart,
       }}
     >
       {children}
