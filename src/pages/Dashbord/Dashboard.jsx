@@ -1,7 +1,7 @@
 import React from "react";
 import "./Dashboard.css";
 import MainArea from "./components/Mainarea";
-import SideBar from "./components/Sidebar";
+import SideBar from "./components/SideBar";
 import Header from "./Header";
 
 function Dashboard() {

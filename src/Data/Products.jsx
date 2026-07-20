@@ -1,6 +1,6 @@
 const cards = [
   { id: 1, img: "/img/Rectangle 6.png", title: "LINEN BEACH TOWEL" },
-  { id: 2, img: "/img/Group 232.png", title: "Square Clear Glass Box" },
+  { id: 2, img: "/img/Rectangle 777.png", title: "Square Clear Glass Box" },
   {
     id: 3,
     img: "/img/toa-heftiba-sHgXu7DWUX4-unsplash.jpg",

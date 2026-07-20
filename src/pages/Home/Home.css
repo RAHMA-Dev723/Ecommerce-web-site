@@ -135,6 +135,13 @@
   height: 422px;
   margin-bottom: 15px;
 }
+.ProductsSection .card .card-img {
+  position: relative;
+}
+.ProductsSection .card .card-img:hover .card-hover {
+  display: inline-flex;
+}
+
 .ProductsSection .card h3 {
   color: var(--text-color);
 }
