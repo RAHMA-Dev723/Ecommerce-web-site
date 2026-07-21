@@ -1,6 +1,6 @@
 import React from "react";
 import "./Dashboard.css";
-import MainArea from "./components/Mainarea";
+import MainArea from "./components/MainArea";
 import SideBar from "./components/SideBar";
 import Header from "./Header";
 
